@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Mulish", sans-serif;
+    /* background-color: #f9fbfc; */
+  }
+}
+@layer utilities {
+  .zIndex-0 {
+    z-index: -1;
+  }
+
+  .border-x-1 {
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+
+  .my-min-width {
+    min-width: 100px;
+  }
+  .box-shadow {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.04);
+  }
+  .agentList-top {
+    top: -120px;
+  }
+  .top-50 {
+    top: -50px;
+  }
+  .margin-top {
+    margin-top: -140px;
+  }
+}
+
+@responsive {
+  .myGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+  .my-minsm-width {
+    min-width: 180px;
+  }
+  .top-20 {
+    top: 80px;
+  }
+  .top-35 {
+    top: 35px;
+  }
+  .top-65 {
+    top: -65px;
+  }
+  .top-40 {
+    top: 80px;
+  }
+  .top-50 {
+    top: -50px;
+  }
+  .top-30 {
+    top: -30px;
+  }
+  .h-110 {
+    height: 110%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .top-20 {
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .top-20 {
+    top: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .top-20 {
+    top: 25px;
+  }
+  .my-padding {
+    padding: 0 10px;
+  }
+}
