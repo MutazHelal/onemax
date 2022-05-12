@@ -490,7 +490,7 @@ export default function MortgageCalculator() {
                     <button className="loan-card-btn" 
                       onClick={e => {
                         setShowTable((!showTable));
-                      }}>Show Amortization Table</button>
+                      }}>Show Monthly Payment</button>
                   </div>
 
                 </div>
