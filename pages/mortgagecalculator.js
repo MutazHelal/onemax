@@ -177,7 +177,7 @@ export default function MortgageCalculator() {
                   </div>
                   <div className="field-input-wrapper">
                     <span className="field-unit">$</span>
-                    <input className="bblr-0 btlr-0" type="text" value={calculatorState.homeValue} 
+                    <input className="bblr-0 btlr-0" type="text" value={numberWithCommas(calculatorState.homeValue)} 
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -197,7 +197,7 @@ export default function MortgageCalculator() {
                   </div>
                   <div className="field-input-wrapper">
                     <span className="field-unit">$</span>
-                    <input className="bblr-0 btlr-0" type="text" value={((calculatorState.homeValue * calculatorState.downPaymentPercent) / 100)}
+                    <input className="bblr-0 btlr-0" type="text" value={numberWithCommas((calculatorState.homeValue * calculatorState.downPaymentPercent) / 100)}
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -229,7 +229,7 @@ export default function MortgageCalculator() {
                   </div>
                   <div className="field-input-wrapper">
                     <span className="field-unit">$</span>
-                    <input className="bblr-0 btlr-0" type="text" disabled="disabled" value={calculatorState.homeValue - ((calculatorState.homeValue * calculatorState.downPaymentPercent) / 100)} />
+                    <input className="bblr-0 btlr-0" type="text" disabled="disabled" value={numberWithCommas(calculatorState.homeValue - ((calculatorState.homeValue * calculatorState.downPaymentPercent) / 100))} />
                   </div>
                 </div>
 
@@ -238,7 +238,7 @@ export default function MortgageCalculator() {
                     <label>Interest Rate: </label>
                   </div>
                   <div className="field-input-wrapper">
-                    <input className="bbrr-0 btrr-0" type="text" value={calculatorState.interestRate}
+                    <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.interestRate)}
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -320,7 +320,7 @@ export default function MortgageCalculator() {
                     <label>Property Tax: </label>
                   </div>
                   <div className="field-input-wrapper">
-                    <input className="bbrr-0 btrr-0" type="text" value={calculatorState.propertyTax} 
+                    <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.propertyTax)} 
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -340,7 +340,7 @@ export default function MortgageCalculator() {
                     <label>PMI: </label>
                   </div>
                   <div className="field-input-wrapper">
-                    <input className="bbrr-0 btrr-0" type="text" value={calculatorState.pmiPercent}
+                    <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.pmiPercent)}
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -372,7 +372,7 @@ export default function MortgageCalculator() {
                     <label>Home Insurance: </label>
                   </div>
                   <div className="field-input-wrapper">
-                    <input className="bbrr-0 btrr-0" type="text" value={calculatorState.homeInsurance} 
+                    <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.homeInsurance)} 
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -393,7 +393,7 @@ export default function MortgageCalculator() {
                   </div>
                   <div className="field-input-wrapper">
                   <span className="field-unit">$</span>
-                    <input className="bblr-0 btlr-0" type="text" value={calculatorState.monthlyCondoFee} 
+                    <input className="bblr-0 btlr-0" type="text" value={numberWithCommas(calculatorState.monthlyCondoFee)} 
                       onChange={e => {
 
                         if (isNaN(Number(e.target.value))) {
@@ -490,7 +490,7 @@ export default function MortgageCalculator() {
                     <button className="loan-card-btn" 
                       onClick={e => {
                         setShowTable((!showTable));
-                      }}>Show Monthly Payment</button>
+                      }}>Show Amortization Table</button>
                   </div>
 
                 </div>
@@ -520,6 +520,16 @@ export default function MortgageCalculator() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <div className='mort-det-weekly-div'>
+            <div className='mortgage-details-div'>
+
+            </div>
+
+            <div className='weekly-payments-div'>
+
+            </div>
           </div>
 
         </div>
