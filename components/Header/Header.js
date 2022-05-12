@@ -9,6 +9,7 @@ export default function Header() {
     { item: "About Us", to: "/aboutus" },
     { item: "Listings", to: "/listing" },
     { item: "Agents", to: "/agents" },
+    { item: "Mortgage Calculator", to: "/mortgagecalculator"},
   ];
   const changeBackground = () => {
     if (window.scrollY >= 80) {

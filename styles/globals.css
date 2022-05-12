@@ -8,6 +8,131 @@
     font-family: "Mulish", sans-serif;
     /* background-color: #f9fbfc; */
   }
+  .mg-calc-widget {
+    padding-top: 96.08px;
+  }
+  .mg-calc-inner {
+    padding-top: 76px;
+    padding-bottom: 10px;
+  }
+  .mg-calc-centered {
+    display: flex;
+    justify-content: center;
+  }
+  .mg-calc-centered-inner {
+    width: 700px;
+  }
+  .mg-calc-form-card-area {
+    display: flex;
+    padding-top: 76px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .mg-calc-form-area {
+    width: 60%;
+    padding-right: 40px;
+  }
+  .mg-calc-card-area {
+    width: 40%;
+  }
+  .mg-calc-form {
+    background-color: #ffffff;
+  }
+  .field-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .field-input-wrapper {
+    width: 55%;
+    display: flex;
+    align-items: center;
+  }
+  .field-input-wrapper input, .field-input-wrapper select {
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 5px;
+    outline: 0;
+  }
+  .field-input-wrapper select {
+    padding: 6px;
+  }
+  .field-input-wrapper .field-unit {
+    display: flex;
+    padding: 0 10px;
+    height: 36px;
+    align-items: center;
+    background: #eee;
+    border: 1px solid #b3b3b3;
+  }
+
+  .mg-calc-loan-card .field-group {
+    font-size: 14px;
+  }
+
+  .loan-card-btn {
+    background: #1ea59a;
+    color: #fff;
+    padding: 10px;
+    float: right;
+  }
+
+  .mg-calc-loan-card {
+    box-shadow: 1px 1px 8px #ebebeb;
+    border-radius: 3px;
+  }
+  .mg-calc-loan-card>div {
+    padding: 20px;
+  }
+  .mg-calc-loan-card>div:first-child {
+    background-color: #eee;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .amortization-table {
+    width: 100%;
+    min-width: 464px;
+  }
+  .amortization-table td, .amortization-table th {
+    text-align: right;
+  }
+  .amortization-table td:first-child, .amortization-table th:first-child {
+    text-align: left;
+  }
+  .amort-table-wrapper {
+    margin-top: 25px;
+    padding: 20px;
+    box-shadow: 1px 1px 8px #eee;
+    border-radius: 3px;
+    overflow-x: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+
+  .mg-calc-form .range-slider {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .bblr-0 {
+    border-bottom-left-radius: 0 !important;
+  }
+  .btlr-0 {
+    border-top-left-radius: 0 !important;
+  }
+  .bbrr-0 {
+    border-bottom-right-radius: 0 !important;
+  }
+  .btrr-0 {
+    border-top-right-radius: 0 !important;
+  }
+  .w-100 {
+    width: 100%;
+  }
 }
 @layer utilities {
   .zIndex-0 {
@@ -70,6 +195,14 @@
   .top-20 {
     top: 60px;
   }
+  .mg-calc-form-card-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .amort-table-wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 @media only screen and (max-width: 450px) {
   .top-20 {
@@ -82,5 +215,23 @@
   }
   .my-padding {
     padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .mg-calc-centered-inner {
+    width: unset;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mg-calc-form-card-area {
+    flex-direction: column;
+  }
+  .mg-calc-form-area {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+  .mg-calc-card-area {
+    width: 100%;
   }
 }
