@@ -179,13 +179,14 @@ export default function MortgageCalculator() {
                     <span className="field-unit">$</span>
                     <input className="bblr-0 btlr-0" type="text" value={numberWithCommas(calculatorState.homeValue)} 
                       onChange={e => {
-
-                        if (isNaN(Number(e.target.value))) {
+                        
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
+                          console.log("returning");
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.homeValue = Number(e.target.value);
+                        newState.homeValue = e.target.value.replaceAll(",", "");
                         updateCalculatorState(newState);
                       }} />
                   </div>
@@ -200,12 +201,12 @@ export default function MortgageCalculator() {
                     <input className="bblr-0 btlr-0" type="text" value={numberWithCommas((calculatorState.homeValue * calculatorState.downPaymentPercent) / 100)}
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
     
                         let newState = {...calculatorState}
-                        newState.downPaymentPercent = Number((e.target.value * 100) / newState.homeValue);
+                        newState.downPaymentPercent = Number((Number(e.target.value.replaceAll(",", "")) * 100) / newState.homeValue);
                         updateCalculatorState(newState);
                       }} />
                   </div>
@@ -241,12 +242,12 @@ export default function MortgageCalculator() {
                     <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.interestRate)}
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.interestRate = Number(e.target.value);
+                        newState.interestRate = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                     <span className="field-unit">%</span>
@@ -273,12 +274,12 @@ export default function MortgageCalculator() {
                     <input className="bbrr-0 btrr-0" type="text" value={calculatorState.loanTerm} 
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.loanTerm = Number(e.target.value);
+                        newState.loanTerm = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                     <span className="field-unit">years</span>
@@ -323,12 +324,12 @@ export default function MortgageCalculator() {
                     <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.propertyTax)} 
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.propertyTax = Number(e.target.value);
+                        newState.propertyTax = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                     <span className="field-unit">$/years</span>
@@ -343,12 +344,12 @@ export default function MortgageCalculator() {
                     <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.pmiPercent)}
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.pmiPercent = Number(e.target.value);
+                        newState.pmiPercent = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                     <span className="field-unit">%</span>
@@ -375,12 +376,12 @@ export default function MortgageCalculator() {
                     <input className="bbrr-0 btrr-0" type="text" value={numberWithCommas(calculatorState.homeInsurance)} 
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.homeInsurance = Number(e.target.value);
+                        newState.homeInsurance = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                     <span className="field-unit">$/year</span>
@@ -396,12 +397,12 @@ export default function MortgageCalculator() {
                     <input className="bblr-0 btlr-0" type="text" value={numberWithCommas(calculatorState.monthlyCondoFee)} 
                       onChange={e => {
 
-                        if (isNaN(Number(e.target.value))) {
+                        if (isNaN(Number(e.target.value.replaceAll(",", "")))) {
                           return;  
                         }
 
                         let newState = {...calculatorState}
-                        newState.monthlyCondoFee = Number(e.target.value);
+                        newState.monthlyCondoFee = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
                   </div>
@@ -490,7 +491,7 @@ export default function MortgageCalculator() {
                     <button className="loan-card-btn" 
                       onClick={e => {
                         setShowTable((!showTable));
-                      }}>Show Monthly Payment</button>
+                      }}>Show Amortization Table</button>
                   </div>
 
                 </div>
