@@ -5,7 +5,7 @@ export default function Header() {
   const [navbar, setNavbar] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const navArray = [
-    { item: "Home", to: "/home" },
+    { item: "Home", to: "/" },
     { item: "About Us", to: "/aboutus" },
     { item: "Listings", to: "/listing" },
     { item: "Agents", to: "/agents" },
