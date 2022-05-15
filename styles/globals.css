@@ -147,14 +147,18 @@
   .mortgage-details-flex>div {
     flex: 1;
   }
+  .mortgage-details-flex>div:nth-child(3) {
+    padding-right: 20px;
+  }
   .mortgage-details-flex .mgd-progress-bar {
     background-color: #000;
     height: 16px;
     position: relative;
+    max-width: 100%;
   }
   .mortgage-details-flex .mgd-progress-bar .percentage-progress {
     position: absolute;
-    right: -38px;
+    right: -42px;
     font-size: 10px;
   }
 
