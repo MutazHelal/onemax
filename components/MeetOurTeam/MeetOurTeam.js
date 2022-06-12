@@ -1,12 +1,12 @@
 import React from "react";
 import AgentList from "./AgentList";
 import Link from "next/link";
-export default function MeetOurAgent() {
+export default function MeetOurTeam() {
   return (
-    <section className="container px-4 py-16 mx-auto bg-white sm:px-12 lg:px-4">
+    <section className="container MeetOurTeam px-4 py-16 mx-auto bg-white sm:px-12 lg:px-4">
       <div className="grid pb-20 lg:grid-cols-2 ">
         <h6 className="text-4xl font-bold text-center sm:text-5xl lg:text-left text-dark-blue ">
-          Meet our agents at <br className="hidden lg:block" /> your service
+          Meet our team at <br className="hidden lg:block" /> your service
         </h6>
         <div className="flex flex-col items-center lg:items-start lg:pl-16">
           <p className="pt-5 text-center sm:text-xl text-short-title lg:text-left lg:pt-0">
