@@ -64,6 +64,10 @@ export default function WhoWeAre() {
           <SplideSlide>
             <img src="./images/who3.png" alt="" />
           </SplideSlide>
+
+          <SplideSlide>
+            <img src="./images/who2.png" alt="" />
+          </SplideSlide>
           <SplideSlide>
             <img src="./images/who1.png" alt="" />
           </SplideSlide>

@@ -51,6 +51,15 @@
   margin-bottom: 1rem;
   align-items: center;
 }
+.SliderInput input[type="text"] {
+  height: 61px;
+  width: 100%;
+  padding: 0rem 1rem;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  outline: none;
+  margin-bottom: 1rem;
+}
 .FilterInput input,
 .FilterInput select {
   height: 90%;
@@ -59,12 +68,27 @@
   color: #8c959f;
   border: none;
 }
-
+.FilterInput {
+  position: relative;
+}
 .FilterInput select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: "";
+}
+.FilterInput .options_dropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 100%;
+  left: 0px;
+  border: 1px solid #e3e3e3;
+  z-index: 99;
+}
+.FilterInput .options_dropdown li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 .FilterInput img {
   height: 16px;
@@ -782,9 +806,47 @@
   color: #8c959f;
   margin-bottom: 1rem;
 }
+
+/* slider_area_specs */
+.slider_area_specs {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.slider_area_specs .splide {
+  width: 800px;
+}
+.slider_area_specs .splide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ListFilter > a {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #1ea59a;
+  display: flex;
+}
+.ContactArea {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 @layer base {
   body {
     font-family: "Mulish", sans-serif;
+    /* background-color: #f9fbfc; */
   }
   .mg-calc-widget {
     padding-top: 96.08px;
@@ -1054,6 +1116,34 @@
   input[type="range"]:focus::-ms-fill-upper {
     background: #d51818;
   }
+
+  /* Style for savings calculator */
+  .sv-calc-widget {
+    padding-top: 96.08px;
+    padding-bottom: 10rem;
+  }
+  .sv-calc-wrapper {
+    display: flex;
+  }
+  .sv-calc-intro-div {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+  }
+  .sv-calc-intro-div-inner {
+    width: 285px;
+  }
+  .sv-calc-form-area {
+    width: 60%;
+    padding: 60px 60px;
+    padding-bottom: 20px;
+  }
+  .sv-calc-home-val-slider-wrapper {
+    position: relative;
+    margin-top: 10px;
+  }
 }
 @layer utilities {
   .zIndex-0 {
@@ -1152,9 +1242,36 @@
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1280px) {
+  .header_nav span {
+    padding-right: 0.5rem;
+  }
+  .header_nav .bg-button-bg {
+    padding: 0px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 120px !important;
+  }
+}
 @media screen and (max-width: 870px) {
   .grid_wrapper_who_we_are img {
     height: unset !important;
+  }
+  .splide__slide {
+    display: flex;
+    align-items: center;
+  }
+  .slider_area_specs .splide {
+    width: 100%;
   }
 }
 @media screen and (max-width: 770px) {
@@ -1337,6 +1454,76 @@
   }
   .WhoWeAre h6 {
     font-size: 2.25rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mg-calc-form-card-area {
+    flex-direction: column;
+  }
+  .mg-calc-form-area {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+  .mg-calc-card-area {
+    width: 100%;
+  }
+  .mort-det-weekly-div {
+    flex-direction: column;
+  }
+  .mortgage-details-div {
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 25px;
+  }
+  .weekly-payments-div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .top-20 {
+    top: 60px;
+  }
+  .mg-calc-form-card-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .amort-table-wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .mort-det-weekly-div {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .top-20 {
+    top: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .top-20 {
+    top: 25px;
+  }
+  .my-padding {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .mg-calc-centered-inner {
+    width: unset;
+  }
+  .sv-calc-wrapper {
+    flex-direction: column;
+  }
+  .sv-calc-intro-div {
+    width: 100%;
+    padding: 60px 0px;
+  }
+  .sv-calc-form-area {
+    width: 100%;
+    padding: 20px 0;
   }
 }
 @media only screen and (max-width: 991px) {

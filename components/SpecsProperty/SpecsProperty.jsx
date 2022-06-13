@@ -1,14 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
+// Default theme
+import "@splidejs/react-splide/css";
+
+// or other themes
+import "@splidejs/react-splide/css/skyblue";
+import "@splidejs/react-splide/css/sea-green";
+
+// or only core styles
+import "@splidejs/react-splide/css/core";
 export default function SpecsProperty() {
+  const [showSlider, setShowSlider] = useState(false);
+  const HandleSlider = (e) => {
+    setShowSlider(true);
+  };
   return (
     <div className="SpecsProperty container MeetOurTeam px-4 py-16 mx-auto bg-white sm:px-12 lg:px-4">
       <div className="left_area">
-        <img src="./images/pro1.png" alt="" />
-        <img src="./images/pro2.png" alt="" />
-        <img src="./images/pro3.png" alt="" />
-        <img src="./images/pro1.png" alt="" />
+        <img src="./images/pro1.png" alt="" onClick={HandleSlider} />
+        <img src="./images/pro2.png" alt="" onClick={HandleSlider} />
+        <img src="./images/pro3.png" alt="" onClick={HandleSlider} />
+        <img src="./images/pro1.png" alt="" onClick={HandleSlider} />
       </div>
+      {showSlider && (
+        <div className="slider_area_specs">
+          <Splide
+            options={{
+              perPage: 1,
+              gap: "1rem",
+              perMove: 1,
+            }}
+          >
+            <SplideSlide>
+              <img
+                src="./images/pro1.png"
+                alt=""
+                onClick={(e) => setShowSlider(false)}
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src="./images/pro2.png"
+                alt=""
+                onClick={(e) => setShowSlider(false)}
+              />
+            </SplideSlide>
+            <SplideSlide>
+              <img
+                src="./images/pro3.png"
+                alt=""
+                onClick={(e) => setShowSlider(false)}
+              />
+            </SplideSlide>
+
+            <SplideSlide>
+              <img
+                src="./images/pro1.png"
+                alt=""
+                onClick={(e) => setShowSlider(false)}
+              />
+            </SplideSlide>
+          </Splide>
+        </div>
+      )}
+
       <div className="presentation_area">
         <span>
           Rent <img src="./images/Ellipse 14.svg" alt="" /> Furnished

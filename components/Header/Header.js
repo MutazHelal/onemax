@@ -32,10 +32,10 @@ export default function Header() {
           <img
             src="./images/logo.png"
             alt="#"
-            className="cursor-pointer w-36 sm:w-44"
+            className="cursor-pointer w-36 sm:w-44 logo"
           />
         </Link>
-        <div className="hidden md:block">
+        <div className="hidden md:block header_nav">
           {navArray.map((el, i) => (
             <Link
               href={el.to}
@@ -51,8 +51,7 @@ export default function Header() {
           ))}{" "}
           <Link href="/contact" passHref={true} className="cursor-pointer">
             <span className="px-6 py-4 text-base text-white cursor-pointer lg:ml-3 bg-button-bg">
-              {" "}
-              Contact
+              About Onemax
             </span>
           </Link>
         </div>
@@ -98,8 +97,7 @@ export default function Header() {
                 onClick={() => sidebar(false)}
               >
                 <span className="px-6 py-3 mt-4 text-base text-white bg-button-bg">
-                  {" "}
-                  Contact
+                  About Onemax
                 </span>
               </Link>
             </div>

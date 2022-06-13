@@ -6,11 +6,10 @@ export default function ResultSelfCard({ img }) {
     <div className="ResultSelfCard">
       <img src={img} alt="" />
       <div className="presentation">
-        <h1>The Queen Inside - Type 3</h1>
-        <p>123 Queen Street - Toronto, ON</p>
+        <h1>123 Queen Street - Toronto, ON</h1>
         <div className="bottom_area">
           <p>$989K</p>
-          <Link href="/">
+          <Link href="/listingSpecs">
             <span>
               <span>Details</span>
               <img src="./images/ArrowRightBlack.svg" alt="" />

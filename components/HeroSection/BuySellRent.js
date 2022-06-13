@@ -103,7 +103,6 @@ export default function BuySellRent() {
                       el.dropdown && "my-min-width sm:my-minsm-width"
                     }`}
                   >
-                    {" "}
                     {!el.dropdown
                       ? el.tagline
                       : dropdownValue

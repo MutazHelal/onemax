@@ -8,12 +8,13 @@ import MeetOurAgent from "../components/MeetOurAgent/MeetOurAgent";
 import Recomended from "../components/Recomended/Recomended";
 import Testimonial from "../components/Testimonial/Testimonial";
 import TrustedBy from "../components/TrustedBy/TrustedBy";
-
+import SavingsCalculatorComp from "../components/SavingsCalculator/SavingsCalculatorComp";
 export default function Home() {
   return (
     <>
       <Header />
       <HeroSection />
+      <SavingsCalculatorComp />
       <TrustedBy />
       <HighestRated />
       <LatestProperty />
