@@ -21,12 +21,14 @@ export default function FilterInput({
       ) : (
         <>
           <select style={{ pointerEvents: "none" }}>
-            <option value={dropdownValue} selected>
+            <option value={dropdownValue} defaultValue>
               {dropdownValue}
             </option>
             {options &&
               options.map((EachOption) => (
-                <option value={EachOption}>{EachOption}</option>
+                <option value={EachOption} key={EachOption}>
+                  {EachOption}
+                </option>
               ))}
           </select>
           <img

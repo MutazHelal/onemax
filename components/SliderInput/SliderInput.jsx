@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
 export default function SliderInput() {
-  const [range, setrange] = useState(10);
+  const [range, setrange] = useState(135);
   return (
-    <div className="SliderInput ">
+    <div className="SliderInput">
+      <div className="range_number">
+        <p>$135</p>
+        <p>$335</p>
+      </div>
       <input
         type="range"
-        min={10}
-        max={100}
+        min={135}
+        max={335}
+        value={range}
         onChange={(e) => {
           setrange(e.target.value);
           console.log(e.target.value);

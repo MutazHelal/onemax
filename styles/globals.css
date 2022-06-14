@@ -51,6 +51,14 @@
   margin-bottom: 1rem;
   align-items: center;
 }
+.SliderInput .range_number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SliderInput .range_number + input {
+  margin-top: 0px;
+}
 .SliderInput input[type="text"] {
   height: 61px;
   width: 100%;
