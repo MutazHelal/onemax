@@ -54,21 +54,21 @@ export default function PropertyList() {
     ],
     [
       {
-        img: "./images/building1.png",
+        img: "/images/building1.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
         detailsTo: "/listingSpecs",
       },
       {
-        img: "./images/building2.png",
+        img: "/images/building2.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
         detailsTo: "/listingSpecs",
       },
       {
-        img: "./images/building3.png",
+        img: "/images/building3.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
@@ -95,7 +95,10 @@ export default function PropertyList() {
           ))}
         </div>
         <div className="flex justify-center mt-5 lg:mt-0 lg:justify-end">
-          <a href="" className="flex items-center p-4 py-3 bg-button-bg">
+          <a
+            href="/listing"
+            className="flex items-center p-4 py-3 bg-button-bg"
+          >
             <span className="mr-3 text-lg text-white">Explore All Listing</span>
             <Image
               src="/images/ArrowRight.svg"
