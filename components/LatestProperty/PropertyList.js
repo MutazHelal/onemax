@@ -95,18 +95,26 @@ export default function PropertyList() {
           ))}
         </div>
         <div className="flex justify-center mt-5 lg:mt-0 lg:justify-end">
-          <a
+          <Link
             href="/listing"
+            passHref
             className="flex items-center p-4 py-3 bg-button-bg"
           >
-            <span className="mr-3 text-lg text-white">Explore All Listing</span>
-            <Image
-              src="/images/ArrowRight.svg"
-              width={20}
-              height={20}
-              alt="#"
-            />
-          </a>
+            <div
+              className="flex items-center p-4 py-3 bg-button-bg"
+              style={{ cursor: "pointer" }}
+            >
+              <span className="mr-3 text-lg text-white">
+                Explore All Listing
+              </span>
+              <Image
+                src="/images/ArrowRight.svg"
+                width={20}
+                height={20}
+                alt="#"
+              />
+            </div>
+          </Link>
         </div>
       </div>
       <div className="grid gap-8 px-6 my-padding sm:px-0 sm:grid-cols-2 lg:grid-cols-3">
