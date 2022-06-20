@@ -1,6 +1,6 @@
 import React from "react";
 import BuySellRent from "./BuySellRent";
-
+import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative w-full px-5 pb-12 pt-28 xl:px-10 ">
@@ -17,11 +17,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <img
-        src="./images/hero.png"
-        alt="#"
-        className="top-0 right-0 w-full h-full cursor-pointer h-6/12 md:w-3/6 md:absolute zIndex-0 lg:w-3/6"
-      />
+      <div className="top-0 right-0 w-full h-full cursor-pointer h-6/12 md:w-3/6 md:absolute zIndex-0 lg:w-3/6 hero_wrapper_index">
+        <Image src="/images/hero.png" alt="#" layout="fill" />
+      </div>
     </section>
   );
 }

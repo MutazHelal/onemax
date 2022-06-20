@@ -1,9 +1,9 @@
 import React from "react";
-
+import Image from "next/image";
 export default function AgentList() {
   const dataArray = [
     {
-      img: "./images/agent1.png",
+      img: "/images/agent1.png",
       name: "One Max Agent",
       position: "Property Expert",
       socialLinks: [
@@ -14,7 +14,7 @@ export default function AgentList() {
       ],
     },
     {
-      img: "./images/agent2.png",
+      img: "/images/agent2.png",
       name: "One Max Agent",
       position: "Property Expert",
       socialLinks: [
@@ -25,7 +25,7 @@ export default function AgentList() {
       ],
     },
     {
-      img: "./images/agent3.png",
+      img: "/images/agent3.png",
       name: "One Max Agent",
       position: "Property Expert",
       socialLinks: [
@@ -37,10 +37,10 @@ export default function AgentList() {
     },
   ];
   const socialIcons = [
-    "./images/InstagramLogo.svg",
-    "./images/LinkedinLogo.svg",
-    "./images/TiktokLogo.svg",
-    "./images/TwitterLogo.svg",
+    "/images/InstagramLogo.svg",
+    "/images/LinkedinLogo.svg",
+    "/images/TiktokLogo.svg",
+    "/images/TwitterLogo.svg",
   ];
   return (
     <div className="grid gap-8 px-6 sm:px-0 sm:grid-cols-2 lg:grid-cols-3">
@@ -54,7 +54,9 @@ export default function AgentList() {
           <div
             className={`absolute flex justify-center w-4/5 agentList-top bg-section-bg d-flex `}
           >
-            <img src={el.img} alt="#" className="" />
+            <div style={{ position: "relative", height: 320, width: "70%" }}>
+              <Image src={el.img} layout="fill" alt="#" />
+            </div>
           </div>
           <div className="px-3 py-10 pt-56">
             <h5 className="text-2xl font-semibold text-center text-dark-blue">
@@ -63,7 +65,7 @@ export default function AgentList() {
             <p className="py-4 text-lg text-center text-short-title">
               Property Expert
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center agent_list_social_wrapper">
               {socialIcons.map((element, i) => (
                 <a
                   href={el.socialLinks[i]}
@@ -71,8 +73,7 @@ export default function AgentList() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
-                  <img src={element} alt="#" className="w-8 mx-3" />
+                  <Image src={element} width={25} height={25} alt="#" />
                 </a>
               ))}
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Service from "./Service";
 import TenantsPotential from "./TenantsPotential";
 import Unit from "./Unit";
-
+import Image from "next/image";
 export default function HighestRated() {
   return (
     <section className="px-4 py-24 bg-white ">
@@ -21,12 +21,15 @@ export default function HighestRated() {
         </div>
         <div className="relative flex justify-end h-full pt-28 lg:pt-0">
           <TenantsPotential />
-          <img src="./images/highestRated.png" alt="#" className="w-full " />
+          <div className="w-full man_rated" style={{ height: 800 }}>
+            <Image src="/images/highestRated.png" layout="fill" alt="#" />
+          </div>
           <div className="absolute right-0 flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 bg-button-bg">
-            <img
-              src="./images/CircleWavyCheck.svg"
+            <Image
+              src="/images/CircleWavyCheck.svg"
+              width={20}
+              height={20}
               alt="#"
-              className="w-6 sm:w-8"
             />
           </div>
           <Unit />

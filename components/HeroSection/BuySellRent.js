@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Image from "next/image";
 export default function BuySellRent() {
   const [dropdown, setDropdown] = useState();
   const [dropdownValue, setDropdownValue] = useState(null);
@@ -9,12 +9,12 @@ export default function BuySellRent() {
       {
         title: "Locations",
         tagline: "Selecet your city",
-        icon: "./images/crossHair.svg",
+        icon: "/images/crossHair.svg",
       },
       {
         title: "Property Type",
         tagline: "Choose Property Type",
-        icon: "./images/CaretDown.svg",
+        icon: "/images/CaretDown.svg",
         dropdown: ["A", "B", "C", "D", "E"],
       },
       {
@@ -26,12 +26,12 @@ export default function BuySellRent() {
       {
         title: "Locations",
         tagline: "Selecet your city",
-        icon: "./images/crossHair.svg",
+        icon: "/images/crossHair.svg",
       },
       {
         title: "Property Type",
         tagline: "Choose Property Type",
-        icon: "./images/CaretDown.svg",
+        icon: "/images/CaretDown.svg",
         dropdown: ["A", "B", "C", "D", "E"],
       },
       {
@@ -43,12 +43,12 @@ export default function BuySellRent() {
       {
         title: "Locations",
         tagline: "Selecet your city",
-        icon: "./images/crossHair.svg",
+        icon: "/images/crossHair.svg",
       },
       {
         title: "Property Type",
         tagline: "Choose Property Type",
-        icon: "./images/CaretDown.svg",
+        icon: "/images/CaretDown.svg",
         dropdown: ["A", "B", "C", "D", "E"],
       },
       {
@@ -110,10 +110,12 @@ export default function BuySellRent() {
                       : el.tagline}
                   </p>
                   {el.icon && (
-                    <img
+                    <Image
                       src={el.icon}
                       className="cursor-pointer"
                       alt="#"
+                      width={20}
+                      height={20}
                       onClick={() => {
                         if (el.dropdown) {
                           setDropdown((prev) => !prev);
@@ -140,7 +142,8 @@ export default function BuySellRent() {
           ))}
           <div className="flex justify-end w-full col-span-full md:col-auto">
             <div className="flex items-center justify-center w-full h-12 md:h-16 bg-button-bg md:w-16">
-              <img src="./images/search.svg" alt="#" />
+              <Image src="/images/search.svg" alt="#" width={20} height={20} />
+
               <span className="pl-4 font-semibold text-white md:hidden">
                 Search
               </span>

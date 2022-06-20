@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function AboutAgent() {
+  const [active, setActive] = useState(1);
   return (
     <div className="AboutAgent">
       <div className="buttons_wrapper">
-        <button className="active">About me</button>
-        <button>Our active listing</button>
-        <button>What our client have to say</button>
+        <button
+          className={`${active == 1 && "active"}`}
+          onClick={(e) => setActive(1)}
+        >
+          About me
+        </button>
+        <button
+          className={`${active == 2 && "active"}`}
+          onClick={(e) => setActive(2)}
+        >
+          Our active listing
+        </button>
+        <button
+          className={`${active == 3 && "active"}`}
+          onClick={(e) => setActive(3)}
+        >
+          What our client have to say
+        </button>
       </div>
 
       <div className="content_about">

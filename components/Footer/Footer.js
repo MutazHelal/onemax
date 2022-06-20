@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 export default function Footer() {
   const socialIcons = [
     {
-      icon: "./images/activeInstagram.svg",
+      icon: "/images/activeInstagram.svg",
       to: "https://www.instagram.com/",
     },
-    { icon: "./images/activeLinkedin.svg", to: "https://www.linkedin.com" },
-    { icon: "./images/activeTiktok.svg", to: "https://www tiktok.com/" },
-    { icon: "./images/activeTwitter.svg", to: "https://twitter.com/" },
+    { icon: "/images/activeLinkedin.svg", to: "https://www.linkedin.com" },
+    { icon: "/images/activeTiktok.svg", to: "https://www tiktok.com/" },
+    { icon: "/images/activeTwitter.svg", to: "https://twitter.com/" },
   ];
   const featureArray = [
     { item: "Home", to: "/" },
@@ -44,7 +45,6 @@ export default function Footer() {
       <div className="container grid grid-cols-2 gap-8 pt-16 mx-auto md:pt-48 md:grid-cols-3 xl:grid-cols-5">
         <div className="flex col-span-2 xl:justify-center md:col-span-1">
           <div>
-            {" "}
             <h5 className="py-2 text-xl font-bold text-white 2xl:text-2xl">
               One Max.
             </h5>
@@ -53,8 +53,9 @@ export default function Footer() {
             <div className="flex items-center pt-4 md:pt-10">
               {socialIcons.map((el, i) => (
                 <a href={el.to} key={i} target="_blank" rel="noreferrer">
-                  {" "}
-                  <img src={el.icon} alt="#" className="w-8 mr-5" />
+                  <div className="w-8 mr-5">
+                    <Image src={el.icon} alt="#" width={30} height={30} />
+                  </div>
                 </a>
               ))}
             </div>
@@ -62,7 +63,6 @@ export default function Footer() {
         </div>
         <div className="flex xl:justify-center">
           <div>
-            {" "}
             <h5 className="py-2 text-xl font-bold text-white 2xl:text-2xl">
               Features
             </h5>
@@ -114,7 +114,13 @@ export default function Footer() {
                   className="outline-none"
                 />
                 <div className="flex items-center justify-center rounded-full w-7 h-7 bg-myActiveColor">
-                  <img src="./images/arrowRight.svg" alt="#" className="w-4" />
+                  <Image
+                    src="/images/arrowRight.svg"
+                    alt="#"
+                    className="w-4"
+                    width={15}
+                    height={15}
+                  />
                 </div>
               </div>
             </div>

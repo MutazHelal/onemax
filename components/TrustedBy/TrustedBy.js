@@ -26,7 +26,14 @@ export default function TrustedBy() {
                 i === 4 && "col-span-2 md:col-span-1"
               }`}
             >
-              <img src={el} alt="#" className="block w-32 sm:w-auto "></img>
+              <div
+                className="block"
+                style={{ position: "relative", height: 200, width: "60%" }}
+              >
+                <Image src={el} layout="fill" alt="#" />
+              </div>
+
+              {/* <img src={el} alt="#" className="block w-32 sm:w-auto "></img> */}
             </div>
           ))}
         </div>

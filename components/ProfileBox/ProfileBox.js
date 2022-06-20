@@ -1,27 +1,47 @@
 import React from "react";
-
+import Image from "next/image";
 export default function ProfileBox() {
   return (
     <div className="ProfileBox">
       <div className="img_area">
-        <img src="./images/agent.png" alt="" />
+        <Image src="/images/agent.png" alt="" width={300} height={350} />
       </div>
       <div className="presentation_profile_area">
         <div className="top_area">
           <h1>Jawad Chaudhry</h1>
           <div className="social_area">
             <a href="#">
-              <img src="./images/InstagramLogo.svg" alt="" />
+              <Image
+                src="/images/InstagramLogo.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
             </a>
             <a href="#">
-              <img src="./images/LinkedinLogo.svg" alt="" />
+              <Image
+                src="/images/LinkedinLogo.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
             </a>
 
             <a href="#">
-              <img src="./images/TiktokLogo.svg" alt="" />
+              <Image
+                src="/images/TiktokLogo.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
             </a>
             <a href="#">
-              <img src="./images/TwitterLogo.svg" alt="" />
+              <Image
+                src="/images/TwitterLogo.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
             </a>
           </div>
         </div>
@@ -29,22 +49,22 @@ export default function ProfileBox() {
 
         <div className="rating">
           <div className="stars">
-            <img src="./images/Star_fill.svg" alt="" />
-            <img src="./images/Star_fill.svg" alt="" />
-            <img src="./images/Star_fill.svg" alt="" />
-            <img src="./images/Star_fill.svg" alt="" />
-            <img src="./images/Star.svg" alt="" />
+            <Image src="/images/Star_fill.svg" alt="" width={20} height={20} />
+            <Image src="/images/Star_fill.svg" alt="" width={20} height={20} />
+            <Image src="/images/Star_fill.svg" alt="" width={20} height={20} />
+            <Image src="/images/Star_fill.svg" alt="" width={20} height={20} />
+            <Image src="/images/Star.svg" alt="" width={20} height={20} />
           </div>
           <p>4.8 (2.8K reviews)</p>
         </div>
 
         <ul>
           <li>
-            <img src="./images/Envelope.svg" alt="" />
+            <Image src="/images/Envelope.svg" alt="" width={20} height={20} />
             contact@onemax.ca
           </li>
           <li>
-            <img src="./images/Phone.svg" alt="" />
+            <Image src="/images/Envelope.svg" alt="" width={20} height={20} />
             +1 234 567 890
           </li>
         </ul>

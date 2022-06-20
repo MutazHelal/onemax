@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Image from "next/image";
 export default function FilterInput({
   type,
   placeholder = null,
@@ -16,7 +16,7 @@ export default function FilterInput({
       {type == "input" ? (
         <>
           <input type="text" placeholder={placeholder} />
-          <img src="./images/Crosshair.svg" alt="" />
+          <Image src="/images/Crosshair.svg" width={15} height={15} alt="" />
         </>
       ) : (
         <>
@@ -31,17 +31,28 @@ export default function FilterInput({
                 </option>
               ))}
           </select>
-          <img
-            src="./images/CaretDown.svg"
+
+          <Image
+            src="/images/CaretDown.svg"
+            width={15}
+            height={15}
+            alt=""
             style={{ cursor: "pointer" }}
             onClick={(e) => setDropdown(!dropdown)}
-            alt=""
           />
+
+          {/* <img
+            src="./images/CaretDown.svg"
+            style={{ cursor: "pointer" }}
+           
+            alt=""
+          /> */}
           {dropdown && (
             <ul className="options_dropdown">
               {options &&
-                options.map((EachOption) => (
+                options.map((EachOption, key) => (
                   <li
+                    key={key}
                     onClick={(e) => {
                       setDropdownValue(EachOption);
                       setDropdown(!dropdown);

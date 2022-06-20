@@ -1,21 +1,21 @@
 import React from "react";
-
+import Image from "next/image";
 export default function Testimonial() {
   const textimonialArray = [
     {
-      img: "./images/profile1.png",
+      img: "/images/profile1.png",
       rating: 3,
       title: "Amazing!",
       text: "Since I move to the new home with Homelun, I feel like this is my dream home. I would like to live here in the next couple of year.",
     },
     {
-      img: "./images/profile2.png",
+      img: "/images/profile2.png",
       rating: 3,
       title: "Amazing!",
       text: "Since I move to the new home with Homelun, I feel like this is my dream home. I would like to live here in the next couple of year.",
     },
     {
-      img: "./images/profile3.png",
+      img: "/images/profile3.png",
       rating: 3,
       title: "Amazing!",
       text: "Since I move to the new home with Homelun, I feel like this is my dream home. I would like to live here in the next couple of year.",
@@ -37,22 +37,41 @@ export default function Testimonial() {
               } ${i === 2 ? "w-full sm:w-6/12 lg:w-full" : "w-full"} `}
             >
               <div className="flex justify-between ">
-                <img src={el.img} alt="#" />
+                <Image src={el.img} alt="#" width={70} height={70} />
+
                 <div className="flex items-center">
                   {new Array(3)
-                    .fill("./images/activeStar.svg")
+                    .fill("/images/activeStar.svg")
                     .map((image, index) => (
-                      <img key={index} src={image} alt="#" />
+                      <Image
+                        key={index}
+                        src={image}
+                        alt="#"
+                        width={20}
+                        height={20}
+                      />
                     ))}
                   {new Array(5 - el.rating)
-                    .fill("./images/star.svg")
+                    .fill("/images/star.svg")
                     .map((image, index) => (
-                      <img key={index} src={image} alt="#" />
+                      <Image
+                        key={index}
+                        src={image}
+                        alt="#"
+                        width={20}
+                        height={20}
+                      />
                     ))}
                 </div>
               </div>
               <div className="relative flex items-center justify-start pt-4">
-                <img src="./images/quatation.svg" alt="#" className="" />{" "}
+                <Image
+                  src="/images/quatation.svg"
+                  alt="#"
+                  width={80}
+                  height={80}
+                />
+
                 <p className="absolute pl-1 text-lg font-semibold text-dark-blue ">
                   {el.title}
                 </p>

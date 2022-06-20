@@ -12,6 +12,8 @@ import "@splidejs/react-splide/css/sea-green";
 // or only core styles
 import "@splidejs/react-splide/css/core";
 
+import Image from "next/image";
+
 import Link from "next/link";
 export default function WhoWeAre() {
   return (
@@ -56,26 +58,40 @@ export default function WhoWeAre() {
           }}
         >
           <SplideSlide>
-            <img src="./images/who1.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who1.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
           <SplideSlide>
-            <img src="./images/who2.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who2.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
           <SplideSlide>
-            <img src="./images/who3.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who3.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
 
           <SplideSlide>
-            <img src="./images/who2.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who2.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
           <SplideSlide>
-            <img src="./images/who1.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who1.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
           <SplideSlide>
-            <img src="./images/who2.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who2.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
           <SplideSlide>
-            <img src="./images/who3.png" alt="" />
+            <div style={{ position: "relative", height: 400, width: "100%" }}>
+              <Image src="/images/who3.png" layout="fill" alt="" />
+            </div>
           </SplideSlide>
         </Splide>
       </div>

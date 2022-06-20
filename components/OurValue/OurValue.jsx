@@ -13,25 +13,25 @@ export default function OurValue() {
 
       <div className="value_cards_wrappper">
         <ValueCard
-          img="./images/sound.svg"
+          img="/images/sound.svg"
           title="Get online valuation"
           desc="  We provide a complete service for the sale, purchase or rental of real
         estate."
         />
         <ValueCard
-          img="./images/sell.svg"
+          img="/images/sell.svg"
           title="Sell your home"
           desc="  We provide a complete service for the sale, purchase or rental of real
         estate."
         />
         <ValueCard
-          img="./images/find.svg"
+          img="/images/find.svg"
           title="Find a properties"
           desc="  We provide a complete service for the sale, purchase or rental of real
         estate."
         />
         <ValueCard
-          img="./images/Newdevelopments.svg"
+          img="/images/Newdevelopments.svg"
           title="New developments"
           desc="  We provide a complete service for the sale, purchase or rental of real
         estate."

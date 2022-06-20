@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import Image from "next/image";
+import Link from "next/link";
 export default function PropertyList() {
   const [value, setValue] = useState(0);
   const propertyCategory = ["Residential", "Commercial", "Apartment"];
@@ -7,25 +8,48 @@ export default function PropertyList() {
   const propertyDetails = [
     [
       {
-        img: "./images/building1.png",
+        img: "/images/building1.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
-        detailsTo: "",
+        detailsTo: "/listingSpecs",
       },
       {
-        img: "./images/building2.png",
+        img: "/images/building2.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
-        detailsTo: "",
+        detailsTo: "/listingSpecs",
       },
       {
-        img: "./images/building3.png",
+        img: "/images/building3.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
-        detailsTo: "",
+        detailsTo: "/listingSpecs",
+      },
+    ],
+    [
+      {
+        img: "/images/building1.png",
+        title: "The Queen Inside - Type 3",
+        text: "123 Queen Street - Toronto, ON",
+        price: "989",
+        detailsTo: "/listingSpecs",
+      },
+      {
+        img: "/images/building2.png",
+        title: "The Queen Inside - Type 3",
+        text: "123 Queen Street - Toronto, ON",
+        price: "989",
+        detailsTo: "/listingSpecs",
+      },
+      {
+        img: "/images/building3.png",
+        title: "The Queen Inside - Type 3",
+        text: "123 Queen Street - Toronto, ON",
+        price: "989",
+        detailsTo: "/listingSpecs",
       },
     ],
     [
@@ -34,37 +58,14 @@ export default function PropertyList() {
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
-        detailsTo: "",
+        detailsTo: "/listingSpecs",
       },
       {
         img: "./images/building2.png",
         title: "The Queen Inside - Type 3",
         text: "123 Queen Street - Toronto, ON",
         price: "989",
-        detailsTo: "",
-      },
-      {
-        img: "./images/building3.png",
-        title: "The Queen Inside - Type 3",
-        text: "123 Queen Street - Toronto, ON",
-        price: "989",
-        detailsTo: "",
-      },
-    ],
-    [
-      {
-        img: "./images/building1.png",
-        title: "The Queen Inside - Type 3",
-        text: "123 Queen Street - Toronto, ON",
-        price: "989",
-        detailsTo: "",
-      },
-      {
-        img: "./images/building2.png",
-        title: "The Queen Inside - Type 3",
-        text: "123 Queen Street - Toronto, ON",
-        price: "989",
-        detailsTo: "",
+        detailsTo: "/listingSpecs",
       },
       {
         img: "./images/building3.png",
@@ -95,8 +96,13 @@ export default function PropertyList() {
         </div>
         <div className="flex justify-center mt-5 lg:mt-0 lg:justify-end">
           <a href="" className="flex items-center p-4 py-3 bg-button-bg">
-            <span className="mr-3 text-lg text-white">Explore All Listing</span>{" "}
-            <img src="./images/ArrowRight.svg" alt="#" className="w-6" />
+            <span className="mr-3 text-lg text-white">Explore All Listing</span>
+            <Image
+              src="/images/ArrowRight.svg"
+              width={20}
+              height={20}
+              alt="#"
+            />
           </a>
         </div>
       </div>
@@ -109,7 +115,12 @@ export default function PropertyList() {
             } d-flex justify-center`}
           >
             <div className={i === 2 ? "sm:w-6/12 lg:w-full mx-auto" : ""}>
-              <img src={el.img} alt="#" className="w-full" />
+              <div
+                className="w-full"
+                style={{ position: "relative", height: 300 }}
+              >
+                <Image src={el.img} layout="fill" alt="#" />
+              </div>
               <div className="p-5 bg-white">
                 <h4 className="text-lg font-bold md:text-xl xl:text-2xl text-dark-blue">
                   {el.title}
@@ -121,12 +132,23 @@ export default function PropertyList() {
                   <span className="text-xl font-bold md:text-2xl xl:text-3xl text-activeColor text-myActiveColor">
                     ${el.price}K
                   </span>
-                  <a href={el.detailsTo} className="flex items-center">
-                    <span className="mr-2 text-base xl:text-lg text-dark-blue">
-                      Details
-                    </span>{" "}
-                    <img src="./images/ArrowRightBlack.svg" alt="#" />
-                  </a>
+                  <Link
+                    href={el.detailsTo}
+                    passHref
+                    className="flex items-center"
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <span className="mr-2 text-base xl:text-lg text-dark-blue">
+                        Details
+                      </span>
+                      <Image
+                        src="/images/ArrowRightBlack.svg"
+                        width={20}
+                        height={20}
+                        alt="#"
+                      />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

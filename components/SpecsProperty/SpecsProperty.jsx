@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-
+import Image from "next/image";
 // Default theme
 import "@splidejs/react-splide/css";
 
@@ -18,10 +18,43 @@ export default function SpecsProperty() {
   return (
     <div className="SpecsProperty container MeetOurTeam px-4 py-16 mx-auto bg-white sm:px-12 lg:px-4">
       <div className="left_area">
-        <img src="./images/pro1.png" alt="" onClick={HandleSlider} />
-        <img src="./images/pro2.png" alt="" onClick={HandleSlider} />
-        <img src="./images/pro3.png" alt="" onClick={HandleSlider} />
-        <img src="./images/pro1.png" alt="" onClick={HandleSlider} />
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <Image
+            src={`/images/pro1.png`}
+            layout="fill"
+            objectFit="cover"
+            alt=""
+            onClick={HandleSlider}
+          />
+        </div>
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <Image
+            src={`/images/pro2.png`}
+            layout="fill"
+            objectFit="cover"
+            alt=""
+            onClick={HandleSlider}
+          />
+        </div>
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <Image
+            src={`/images/pro3.png`}
+            layout="fill"
+            objectFit="cover"
+            alt=""
+            onClick={HandleSlider}
+          />
+        </div>
+
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <Image
+            src={`/images/pro1.png`}
+            layout="fill"
+            objectFit="cover"
+            alt=""
+            onClick={HandleSlider}
+          />
+        </div>
       </div>
       {showSlider && (
         <div className="slider_area_specs">
@@ -33,33 +66,61 @@ export default function SpecsProperty() {
             }}
           >
             <SplideSlide>
-              <img
-                src="./images/pro1.png"
-                alt=""
-                onClick={(e) => setShowSlider(false)}
-              />
+              <div
+                style={{
+                  width: "100%",
+                  height: "500px",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={`/images/pro1.png`}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  onClick={(e) => setShowSlider(false)}
+                />
+              </div>
             </SplideSlide>
             <SplideSlide>
-              <img
-                src="./images/pro2.png"
-                alt=""
-                onClick={(e) => setShowSlider(false)}
-              />
+              <div
+                style={{ width: "100%", height: "500px", position: "relative" }}
+              >
+                <Image
+                  src={`/images/pro2.png`}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  onClick={(e) => setShowSlider(false)}
+                />
+              </div>
             </SplideSlide>
             <SplideSlide>
-              <img
-                src="./images/pro3.png"
-                alt=""
-                onClick={(e) => setShowSlider(false)}
-              />
+              <div
+                style={{ width: "100%", height: "500px", position: "relative" }}
+              >
+                <Image
+                  src={`/images/pro3.png`}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  onClick={(e) => setShowSlider(false)}
+                />
+              </div>
             </SplideSlide>
 
             <SplideSlide>
-              <img
-                src="./images/pro1.png"
-                alt=""
-                onClick={(e) => setShowSlider(false)}
-              />
+              <div
+                style={{ width: "100%", height: "500px", position: "relative" }}
+              >
+                <Image
+                  src={`/images/pro1.png`}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  onClick={(e) => setShowSlider(false)}
+                />
+              </div>
             </SplideSlide>
           </Splide>
         </div>
@@ -67,7 +128,16 @@ export default function SpecsProperty() {
 
       <div className="presentation_area">
         <span>
-          Rent <img src="./images/Ellipse 14.svg" alt="" /> Furnished
+          Rent
+          <div style={{ margin: "0rem 10px" }}>
+            <Image
+              src={`/images/Ellipse 14.svg`}
+              width={10}
+              height={10}
+              alt=""
+            />
+          </div>
+          Furnished
         </span>
         <h1>The Queen Inside - Type 64</h1>
         <p>64 Missisauga Avenue - Toronto, ON</p>

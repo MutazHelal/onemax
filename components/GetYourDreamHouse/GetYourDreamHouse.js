@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function FirstFeature() {
   return (
     <section className="px-6 my-20 bg-white md:pt-40 lg:pt-44 xl:pt-80 2xl:pt-96 md:my-0">
@@ -10,7 +10,7 @@ export default function FirstFeature() {
           </h6>
           <div className="flex flex-col items-start ">
             <p className="pt-5 sm:text-xl text-short-title ">
-              We provide a complete service for the sale,{" "}
+              We provide a complete service for the sale,
               <br className="hidden lg:block" /> purchase or rental of real
               estate.
             </p>
@@ -34,16 +34,17 @@ export default function FirstFeature() {
             </div>
 
             <p className="text-[14px] text-center sm:text-left text-[#888888] pt-5 sm:hidden">
-              Still have any question?{" "}
+              Still have any question?
               <span className="text-dark-blue">Contact Us</span>
             </p>
           </div>
         </div>
         <div className="flex justify-center pt-6 md:relative md:pt-0">
-          <img
-            src="./images/dreamHouse.png"
+          <Image
+            src="/images/dreamHouse.png"
+            width={250}
+            height={250}
             alt="#"
-            className="bottom-0 w-8/12 sm:w-7/12 md:w-9/12 md:absolute lg:w-7/12 xl:w-7/12 right-10"
           />
         </div>
       </div>

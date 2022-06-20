@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
@@ -28,12 +29,13 @@ export default function Header() {
       } ${sidebar && "pb-7"} `}
     >
       <div className="flex items-center justify-between w-full px-6 mx-auto lg:container xl:px-2">
-        <Link href="/">
-          <img
-            src="./images/logo.png"
-            alt="#"
-            className="cursor-pointer w-36 sm:w-44 logo"
-          />
+        <Link href="/" passHref>
+          <div
+            className="cursor-pointer w-36 logo"
+            style={{ position: "relative" }}
+          >
+            <Image src="/images/logo.png" alt="#" layout="fill" />
+          </div>
         </Link>
         <div className="hidden md:block header_nav">
           {navArray.map((el, i) => (
@@ -44,7 +46,6 @@ export default function Header() {
               className="cursor-pointer"
             >
               <span className="text-[#727272] text-base pr-8 lg:pr-12 cursor-pointer">
-                {" "}
                 {el.item}
               </span>
             </Link>
@@ -57,17 +58,19 @@ export default function Header() {
         </div>
         <div className="cursor-pointer md:hidden ">
           {sidebar ? (
-            <img
-              src="./images/close.svg"
+            <Image
+              src="/images/close.svg"
               alt="#"
-              className="w-7"
+              width={30}
+              height={30}
               onClick={() => setSidebar(false)}
             />
           ) : (
-            <img
-              src="./images/hamburger.svg"
+            <Image
+              src="/images/hamburger.svg"
               alt="#"
-              className="w-9"
+              width={30}
+              height={30}
               onClick={() => setSidebar(true)}
             />
           )}

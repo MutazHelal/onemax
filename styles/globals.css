@@ -375,6 +375,9 @@
   position: relative;
   margin: 6rem 0rem;
 }
+.ProfileBox .img_area {
+  transform: translateY(-100px);
+}
 .ProfileBox .presentation_profile_area .top_area {
   justify-content: space-between;
 }
@@ -600,11 +603,12 @@
 .SpecsProperty .left_area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  grid-template-rows: 180px 180px 180px;
   grid-gap: 10px;
 }
-.SpecsProperty .left_area > img:first-child {
+.SpecsProperty .left_area > div:first-child {
   grid-column: span 3;
+  grid-row: span 2;
 }
 .SpecsProperty .left_area img {
   width: 100%;
@@ -770,6 +774,12 @@
   text-align: left;
   color: #8c959f;
 }
+.TouchPresentation .profile_presentation {
+  width: 100%;
+}
+.TouchPresentation .profile_presentation > * {
+  width: 70%;
+}
 .TouchPresentation > h2 {
   font-family: Mulish;
   font-size: 24px;
@@ -850,6 +860,13 @@
 .ContactArea {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.agent_list_social_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.agent_list_social_wrapper > * + * {
+  margin-left: 10px;
 }
 @layer base {
   body {
@@ -1034,6 +1051,11 @@
     width: 100%;
   }
 
+  .logo {
+    width: 250px;
+    height: 60px;
+  }
+
   input[type="range"] {
     height: 38px;
     -webkit-appearance: none;
@@ -1180,7 +1202,7 @@
   }
 }
 
-@responsive {
+@layer utilities {
   .myGrid {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -1218,7 +1240,8 @@
 @media screen and (max-width: 1261px) {
   .presentation_profile_area {
     padding-left: 0rem;
-    padding-top: 2rem;
+    padding-top: 0rem;
+    transform: translateY(-70px);
   }
   .ProfileBox {
     grid-template-columns: 1fr;
@@ -1268,11 +1291,15 @@
 @media screen and (max-width: 800px) {
   .logo {
     width: 120px !important;
+    height: 50px;
   }
 }
 @media screen and (max-width: 870px) {
   .grid_wrapper_who_we_are img {
     height: unset !important;
+  }
+  .grid_wrapper_who_we_are {
+    margin-bottom: 4rem;
   }
   .splide__slide {
     display: flex;
@@ -1283,6 +1310,9 @@
   }
 }
 @media screen and (max-width: 770px) {
+  .hero_wrapper_index {
+    display: none;
+  }
   .ResultCards {
     grid-template-columns: 1fr;
   }
@@ -1339,6 +1369,9 @@
   .WhoWeAre h6 {
     line-height: unset;
     font-size: 3rem;
+  }
+  .man_rated {
+    height: 500px !important;
   }
 }
 @media only screen and (max-width: 520px) {
@@ -1431,6 +1464,13 @@
   .Suggestion > h1 {
     font-size: 36px;
   }
+  .TouchPresentation .profile_presentation > div {
+    width: 100%;
+    height: 500px !important;
+  }
+  .man_rated {
+    height: 300px !important;
+  }
 }
 @media only screen and (max-width: 450px) {
   .top-20 {
@@ -1452,6 +1492,9 @@
     padding-top: 0px !important;
     padding-bottom: 0px !important;
   }
+  .TouchPresentation .profile_presentation > div {
+    height: 400px !important;
+  }
 }
 @media only screen and (max-width: 400px) {
   .top-20 {
@@ -1462,6 +1505,12 @@
   }
   .WhoWeAre h6 {
     font-size: 2.25rem;
+  }
+  .man_rated {
+    height: 200px !important;
+  }
+  .TouchPresentation .profile_presentation > div {
+    height: 300px !important;
   }
 }
 @media only screen and (max-width: 991px) {

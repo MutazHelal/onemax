@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function GetYourDreamHouse() {
   return (
     <section className="px-6 my-20 bg-white md:pt-40 lg:pt-44 xl:pt-80 2xl:pt-96 md:my-0">
@@ -32,15 +32,17 @@ export default function GetYourDreamHouse() {
             </div>
 
             <p className="text-[14px] text-center sm:text-left text-[#888888] pt-5 sm:hidden">
-              Still have any question?{" "}
+              Still have any question?
               <span className="text-dark-blue">Contact Us</span>
             </p>
           </div>
         </div>
         <div className="flex justify-center pt-6 md:relative md:pt-0">
-          <img
-            src="./images/dreamHouse.png"
+          <Image
+            src="/images/dreamHouse.png"
             alt="#"
+            width={250}
+            height={250}
             className="bottom-0 w-8/12 sm:w-7/12 md:w-9/12 md:absolute lg:w-7/12 xl:w-7/12 right-10"
           />
         </div>
