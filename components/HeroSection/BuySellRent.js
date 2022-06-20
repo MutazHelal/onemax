@@ -8,7 +8,7 @@ export default function BuySellRent() {
     [
       {
         title: "Locations",
-        tagline: "Selecet your city",
+        tagline: "Select your city",
         icon: "/images/crossHair.svg",
       },
       {
@@ -25,7 +25,7 @@ export default function BuySellRent() {
     [
       {
         title: "Locations",
-        tagline: "Selecet your city",
+        tagline: "Select your city",
         icon: "/images/crossHair.svg",
       },
       {
@@ -42,7 +42,7 @@ export default function BuySellRent() {
     [
       {
         title: "Locations",
-        tagline: "Selecet your city",
+        tagline: "Select your city",
         icon: "/images/crossHair.svg",
       },
       {

@@ -21,7 +21,7 @@ export default function AboutAgent() {
           className={`${active == 3 && "active"}`}
           onClick={(e) => setActive(3)}
         >
-          What our client have to say
+          What our clients have to say
         </button>
       </div>
 

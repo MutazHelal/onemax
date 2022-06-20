@@ -52,7 +52,7 @@ export default function Header() {
           ))}{" "}
           <Link href="/contact" passHref={true} className="cursor-pointer">
             <span className="px-6 py-4 text-base text-white cursor-pointer lg:ml-3 bg-button-bg">
-              About Onemax
+              (905) 560 1629
             </span>
           </Link>
         </div>
@@ -100,7 +100,7 @@ export default function Header() {
                 onClick={() => sidebar(false)}
               >
                 <span className="px-6 py-3 mt-4 text-base text-white bg-button-bg">
-                  About Onemax
+                  (905) 560 1629
                 </span>
               </Link>
             </div>
