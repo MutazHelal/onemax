@@ -932,6 +932,7 @@
     align-items: center;
     background: #eee;
     border: 1px solid #b3b3b3;
+    white-space: nowrap;
   }
 
   .mg-calc-loan-card .field-group {
