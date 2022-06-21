@@ -205,7 +205,7 @@ export default function MortgageCalculatorComp() {
   }, []);
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    return Number(x).toLocaleString();
   }
 
   var taxTotal = calculatorState.loanTerm * calculatorState.propertyTax;
@@ -401,7 +401,7 @@ export default function MortgageCalculatorComp() {
                         newState.propertyTax = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
-                    <span className="field-unit">per year</span>
+                    <span className="field-unit">per years</span>
                   </div>
                 </div>
 

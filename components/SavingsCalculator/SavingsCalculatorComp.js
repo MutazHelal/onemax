@@ -12,7 +12,7 @@ export default function SavingsCalculatorComp() {
   const [savingsValue, setSavingsValue] = useState(15256);
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    return Number(x).toLocaleString();
   }
 
   const calculateSavings = (homeValue) => {
