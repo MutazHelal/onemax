@@ -401,7 +401,7 @@ export default function MortgageCalculatorComp() {
                         newState.propertyTax = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
-                    <span className="field-unit">per years</span>
+                    <span className="field-unit">per year</span>
                   </div>
                 </div>
 
@@ -421,7 +421,7 @@ export default function MortgageCalculatorComp() {
                         newState.homeInsurance = Number(e.target.value.replaceAll(",", ""));
                         updateCalculatorState(newState);
                       }} />
-                    <span className="field-unit">per years</span>
+                    <span className="field-unit">per year</span>
                   </div>
                 </div>
 
