@@ -1,4 +1,4 @@
-##OneMax
+## OneMax
 A Real Estate website created using React.js, includes a finance calculator with visualization charts.
 
 ## Getting Started
